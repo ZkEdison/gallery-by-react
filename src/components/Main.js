@@ -334,7 +334,7 @@ class AppComponent extends React.Component {
 	  console.log('render', this.state.imgsArrangeArr)
 	  let ImgFigureArr = []
 	  this.state.imgsArrangeArr.forEach((item, index) => {
-		  ImgFigureArr.push(<ImgFigure imgSrc={ '../images/' + item.imgData.fileName}
+		  ImgFigureArr.push(<ImgFigure imgSrc={ './images/' + item.imgData.fileName}
 					 text={item.imgData.title}
 					 pos={item.pos}
 					 key={item.index}
