@@ -80,18 +80,24 @@ figcaption {
 .controller-nav {
     position: absolute;
     left:0;
+	right: 0;
     bottom:30px;
     z-index: 101;
     text-align: center;
 }
 /*controller -- end */
-/*.controller {
+.controller {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
+	line-height: 30px;
 	margin: 0 5px;
 	text-align: center;
 	cursor: pointer;
 	background-color: #aaa;
 	border-radius: 50%;
-}*/
+}
+.controller.active {
+	background-color: #1ab499;
+	color: #fff;
+}

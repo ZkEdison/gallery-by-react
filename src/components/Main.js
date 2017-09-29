@@ -333,6 +333,7 @@ class AppComponent extends React.Component {
   render() {
 	  console.log('render', this.state.imgsArrangeArr)
 	  let ImgFigureArr = []
+	  let ControllerUnits = []
 	  this.state.imgsArrangeArr.forEach((item, index) => {
 		  ImgFigureArr.push(<ImgFigure imgSrc={ './images/' + item.imgData.fileName}
 					 text={item.imgData.title}
@@ -345,6 +346,9 @@ class AppComponent extends React.Component {
 					 isCenter={item.isCenter}
 					 inverse={this.inverse}
 					 center={this.center}/>)
+		ControllerUnits.push(
+			<span className={(item.isCenter ? 'active' :'') + ' controller'} onClick={() => this.rearrange(item.index)} key={item.index}>{item.index}</span>
+		)
 	  })
 	return (
 	  <section className="stage"
@@ -354,6 +358,7 @@ class AppComponent extends React.Component {
 			{ImgFigureArr}
 		</section>
 		<nav className="controller-nav">
+			{ControllerUnits}
 		</nav>
 	  </section>
 	);
